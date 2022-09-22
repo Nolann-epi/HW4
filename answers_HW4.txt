@@ -1,0 +1,86 @@
+8) GitHub: 
+   Netlify:
+
+9)
+
+let x = 7;
+function myFunction(x) {
+    x = 10;
+    console.log(`x = ${x}`);
+}
+
+console.log(`x = ${x}`);     --> x = 7
+myFunction(x);               --> x = 10
+console.log(`x = ${x}`);     --> x = 7
+
+10)
+
+let x = 7;
+function myFunction(x) {
+    x = 10;
+    console.log(`x = ${x}`);
+    return x;
+}
+console.log(`x = ${x}`);     --> x = 7
+x = myFunction(x);           --> x = 10
+console.log(`x = ${x}`);     --> x = 10
+
+11)
+
+let x = 7;
+function myFunction(x) {
+    x = 10;
+    return x;
+    console.log(`x = ${x}`);
+}
+console.log(`x = ${x}`);      --> x = 7
+x = myFunction(x);            --> Unreachable
+console.log(`x = ${x}`);      --> x = 10
+
+12)
+
+let x = 7;
+let y = 8;
+function myFunction(x) {
+    console.log(`x = ${x}`);
+    x = 10;
+    return x;
+    
+}
+console.log(`x = ${x}`);    --> x = 7
+console.log(`y = ${y}`);    --> y = 8
+x = myFunction(y);          --> x = 8
+console.log(`x = ${x}`);    --> x = 10 
+console.log(`y = ${y}`);    --> y = 8
+
+
+13)
+
+let dog = {
+    name: "Fang",
+    species: "boarhound",
+    size: 75,
+    bark() {
+        return console.log("Grrr! Grrr!")
+    },
+}
+
+console.log(`${dog.name} is a ${dog.species} dog measuring ${dog.size}`);
+console.log(`Look, a cat! ${dog.name} barks: ${dog.bark()}`
+
+
+14)
+
+const foods = ["Pizza", "Burger", "Hot Dog", "Taco"];
+
+console.log(foods.length);   ---> 4
+console.log(foods[2]);       ---> Hot Dog
+console.log(foods[4]);       ---> undefined
+foods.push("Lasagna");       
+console.log(foods[4]);       ---> Lasagna
+foods.unshift("Chicken");
+console.log(foods[0]);       ---> Chicken
+foods.pop();
+foods.splice(1,3);
+console.log(foods.length);   ---> 2
+console.log(foods[1]);       ---> Taco
